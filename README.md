@@ -12,7 +12,7 @@ In an era where biodiversity conservation is becoming increasingly critical, lev
 
 The challenge is straightforward but carries substantial ecological importance. We aim to **<u>classify the type of insect using sensor data</u>** from different habitats. Accurate classification can inform better strategies for insect conservation and help maintain the balance of ecosystems.
 
-![Image]()
+![Image](https://cdn.nuwe.io/infojobs-data/__images/ML1_FullPipeline.png)
 
 ## 📂 Dataset:
 
@@ -25,32 +25,6 @@ The datasets are structured as follows:
 - `Insect`: Categorical variable indicating the insect classification, present only in the training set.
 
 Ensure to consider all the sensor features for classification as they collectively contribute to identifying the correct insect category.
-
-- Files:
-
-<div
-  style="margin: 0 0 25px;
-        overflow: hidden;
-        padding-left : 30px;
-        padding-right: 30px;
-        padding-bottom: 20px;
-        background-color: rgba(86, 151, 81, 0.12);
-        border-radius: 5px;
-        color:#dddddd;
-        font-weight: 10"
->
-
-
-</div>
-
-- To download the 'train.csv' dataset click <a style ="color: rgba(86, 151, 81, 1); font-weight: 700;" href="https://challenges-asset-files.s3.us-east-2.amazonaws.com/data_sets/Data-Science/4+-+events/jobmadrid/dataset/jm_train.csv"> here</a>.
-
-- To download the 'test.csv' dataset click <a style ="color: rgba(86, 151, 81, 1); font-weight: 700;" href="https://challenges-asset-files.s3.us-east-2.amazonaws.com/data_sets/Data-Science/4+-+events/jobmadrid/dataset/jm_X_test.csv"> here</a>.
-
-- To download the 'example_predictions.csv' dataset click <a style ="color: rgba(86, 151, 81, 1); font-weight: 700;" href="https://challenges-asset-files.s3.us-east-2.amazonaws.com/data_sets/Data-Science/4+-+events/jump2digital/dataset/ejemplo_predicciones.csv"> here</a>.
-
-
-</div>
 
 <hr style="border:1px solid #404560; 
 opacity: 0.5;"> </hr>
@@ -152,3 +126,10 @@ A3: The `predictions.json` file should contain your model's predictions in JSON 
 
 **Q4: How will my model's predictions be evaluated in this hackathon?**  
 A4: Predictions will be automatically evaluated using the F1 Score metric, which balances precision and recall. This is particularly useful in scenarios where class label distribution is uneven, providing a more nuanced insight into the model's predictive power.
+
+**Q5: How to solve the challenge?**
+A5:
+- Solve the proposed objectives.
+- Make a push with the changes made.
+- Click on Submit Challenge.
+- Wait for the results.
