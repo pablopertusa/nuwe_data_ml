@@ -1,12 +1,12 @@
-## 🌿 Insect Classification 
+# 🌿 Insect Classification 
 
-### Category   ➡️   Data
+Category   ➡️   Data Science
 
-### Subcategory   ➡️   Machine Learning Engineer
+Subcategory   ➡️   Machine Learning Engineer
 
-### Difficulty   ➡️   (Basic)
+Difficulty   ➡️   Easy
 
-## ➡️ Background:
+## 🌐 Background
 
 In an era where biodiversity conservation is becoming increasingly critical, leveraging data science to monitor and protect insect populations is vital. This project presents an **engaging opportunity to contribute to environmental science** by predicting the category of insects based on various sensor data inputs.
 
@@ -14,7 +14,8 @@ The challenge is straightforward but carries substantial ecological importance. 
 
 ![Image](https://cdn.nuwe.io/infojobs-data/__images/ML1_FullPipeline.png)
 
-## 📂 Dataset:
+
+### 🗂️ Dataset 
 
 You will work with the provided CSV files, `train.csv` and `test.csv`. The **train dataset** contains several sensor readings along with the corresponding insect category. The **test dataset** includes similar sensor data but without the insect category, which your model should predict.
 
@@ -26,10 +27,15 @@ The datasets are structured as follows:
 
 Ensure to consider all the sensor features for classification as they collectively contribute to identifying the correct insect category.
 
-<hr style="border:1px solid #404560; 
-opacity: 0.5;"> </hr>
+### 📊 Data Processing
 
-### 🗄️ Repo Structure:
+Data preprocessing should be applied to normalize or scale the continuous sensor variables.
+
+### 🤖 Model
+
+You are at liberty to choose the classification algorithm. Whether it be a decision tree, random forest, or a more sophisticated ensemble or deep learning model, select the one that you believe will perform the best for this classification task.
+
+## 📂 Repository Structure
 
 The repository structure is provided and must be adhered to strictly:
 
@@ -66,21 +72,14 @@ You should complete the scripts in the `src` folder, particularly those for mode
 The `models` folder will store the trained classification model, and the `predictions` folder should contain the `predictions.json` file with your model's predicted insect categories.
 
 
-## 🎯 Tasks:
+## 🎯 Tasks
 
 Your mission is to <u>**develop a model that classifies insects into their respective categories (0, 1, or 2) based on sensor readings**</u>. This task will involve analyzing sensor data like 'Sensor_alpha', 'Sensor_beta', and so on, to determine the category of the insect. The provided dataset has been pre-processed and split into training and testing sets for your convenience.
 
-## 📊 Data Processing:
-
-Data preprocessing should be applied to normalize or scale the continuous sensor variables.
-
-## 🤖 Model:
-
-You are at liberty to choose the classification algorithm. Whether it be a decision tree, random forest, or a more sophisticated ensemble or deep learning model, select the one that you believe will perform the best for this classification task.
 
 ## 📤 Submission
 
-To carry out this challenge, we expect to obtain a file in json format whose name is `predictions.json`, where we will have as key the test_id, from the file user_test.csv and as value the prediction of the marketing_target column that has as values 1,2 and 3 (low, medium, high).
+To carry out this challenge, we expect to obtain a file in json format whose name is `predictions.json`, where we will have as key the `Unnamed : 0` column from the test.csv and as value the prediction of the `Insect` , that has as values 0, 1 and 2.
 predictions.json:
 ```json
 {
