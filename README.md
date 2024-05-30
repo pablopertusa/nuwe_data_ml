@@ -6,6 +6,10 @@ Subcategory   ➡️   Machine Learning Engineer
 
 Difficulty   ➡️   Easy
 
+Expected solution time ➡️ 3 hours. **It is essential to complete your solution within this timeframe,** as it is a critical performance indicator used by the hiring company to evaluate your work. The timer will begin when you click the start button and will stop upon your submission.
+
+---
+
 ## 🌐 Background
 
 In an era where biodiversity conservation is becoming increasingly critical, leveraging data science to monitor and protect insect populations is vital. This project presents an **engaging opportunity to contribute to environmental science** by predicting the category of insects based on various sensor data inputs.
@@ -74,7 +78,7 @@ The `models` folder will store the trained classification model, and the `predic
 
 ## 🎯 Tasks
 
-Your mission is to <u>**develop a model that classifies insects into their respective categories (0, 1, or 2) based on sensor readings**</u>. This task will involve analyzing sensor data like 'Sensor_alpha', 'Sensor_beta', and so on, to determine the category of the insect. The provided dataset has been pre-processed and split into training and testing sets for your convenience.
+- Task 1: Your mission is to <u>**develop a model that classifies insects into their respective categories (0, 1, or 2) based on sensor readings**</u>. This task will involve analyzing sensor data like 'Sensor_alpha', 'Sensor_beta', and so on, to determine the category of the insect. The provided dataset has been pre-processed and split into training and testing sets for your convenience.
 
 
 ## 📤 Submission
@@ -108,6 +112,8 @@ The F1 Score is a widely recognized statistical measure used in classification t
 Your predictions will be compared against the true values to calculate the precision and recall, from which the F1 Score will be derived. The closer your F1 Score is to 1, the better your model's performance is considered in terms of both accuracy and robustness.
 
 Please ensure that your `predictions.json` file follows the correct format as specified in the practice guidelines. The automatic evaluation system will parse this file and apply the F1 Score calculation to determine your final assessment.
+
+- Task 1: 900 points
 
 **⚠️ Please note:**  
 All submissions will undergo a manual code review process to ensure that the work has been conducted honestly and adheres to the highest standards of academic integrity. Any form of dishonesty or misconduct will be addressed seriously, and may lead to disqualification from the challenge.
