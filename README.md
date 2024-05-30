@@ -83,8 +83,8 @@ The `models` folder will store the trained classification model, and the `predic
 
 ## 📤 Submission
 
-To carry out this challenge, we expect to obtain a file in json format whose name is `predictions.json`, where we will have as key the `Unnamed : 0` column from the test.csv and as value the prediction of the `Insect` , that has as values 0, 1 and 2.
-predictions.json:
+To carry out this challenge, we expect to obtain a file in json format whose name is `predictions.json`, where we will have as key the `Unnamed : 0` column from the `test.csv`and as value the prediction of the `Insect`, that has as values 0, 1 and 2.
+`predictions.json`:
 ```json
 {
     "target": {
@@ -116,7 +116,7 @@ Please ensure that your `predictions.json` file follows the correct format as sp
 - Task 1: 900 points
 
 **⚠️ Please note:**  
-All submissions will undergo a manual code review process to ensure that the work has been conducted honestly and adheres to the highest standards of academic integrity. Any form of dishonesty or misconduct will be addressed seriously, and may lead to disqualification from the challenge.
+All submissions might undergo a manual code review process to ensure that the work has been conducted honestly and adheres to the highest standards of academic integrity. Any form of dishonesty or misconduct will be addressed seriously, and may lead to disqualification from the challenge.
 
 ## ❓ FAQs
 
@@ -129,7 +129,7 @@ A2: You are free to choose any classification algorithm you prefer. Options incl
 **Q3: What should the `predictions.json` file I submit contain?**  
 A3: The `predictions.json` file should contain your model's predictions in JSON format, where the key is the `Unnamed: 0` and the value is the insect category prediction. The format should follow the schema provided in the challenge guidelines.
 
-**Q4: How will my model's predictions be evaluated in this hackathon?**  
+**Q4: How will my model's predictions be evaluated in this challenge?**  
 A4: Predictions will be automatically evaluated using the F1 Score metric, which balances precision and recall. This is particularly useful in scenarios where class label distribution is uneven, providing a more nuanced insight into the model's predictive power.
 
 **Q5: How to solve the challenge?**
