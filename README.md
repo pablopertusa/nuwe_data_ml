@@ -1,4 +1,4 @@
-# 🌿 Insect Classification 
+# 🐞 Insect Classification 🗃️
 
 Category   ➡️   Data Science
 
