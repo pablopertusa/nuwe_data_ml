@@ -1,23 +1,32 @@
 import argparse
+import polars as pl
+from sklearn.preprocessing import MinMaxScaler
+from utils import normalize_columns, is_day
 
 def load_data(file_path):
-    # TODO: Load data from CSV file
-
+    df = pl.read_csv(file_path)
     return df
 
-def clean_data(df):
-    # TODO: Handle missing values, outliers, etc.
 
+def clean_data(df):
+    cols_to_clean = ["Hour", "Minutes"
+    'Sensor_alpha',
+    'Sensor_beta',
+    'Sensor_gamma',
+    'Sensor_alpha_plus',
+    'Sensor_beta_plus',
+    'Sensor_gamma_plus']
+    df_clean = normalize_columns(df, cols_to_clean)
     return df_clean
 
 def preprocess_data(df):
-    # TODO: Generate new features, transform existing features, resampling, etc.
-
+    df_processed = df.with_columns(
+        pl.col("Hour").map_elements(is_day).alias("is_day")
+    )
     return df_processed
 
 def save_data(df, output_file):
-    # TODO: Save processed data to a CSV file
-    pass
+    df.write_csv(output_file)
 
 def parse_arguments():
     parser = argparse.ArgumentParser(description='Data processing script for Energy Forecasting Hackathon')
