@@ -15,8 +15,8 @@ def split_data(df):
 def train_model(X_train, y_train):
     model = xgb.XGBClassifier(
             objective='multi:softprob',
-            n_estimators=100,
-            learning_rate=0.05,
+            n_estimators=200,
+            learning_rate=0.1,
             eval_metric='mlogloss',
             random_state=27
         )
