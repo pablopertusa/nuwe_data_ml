@@ -14,14 +14,14 @@ predictions_file="$5"
 
 # Run data_processing.py
 echo "Starting data processing..."
-python src/data_processing.py --input_file="$raw_data_file" --output_file="$processed_data_file"
+python3 src/data_processing.py --input_file="$raw_data_file" --output_file="$processed_data_file"
 
 # Run model_training.py
 echo "Starting model training..."
-python src/model_training.py --input_file="$processed_data_file" --model_file="$model_file"
+python3 src/model_training.py --input_file="$processed_data_file" --model_file="$model_file"
 
 # Run model_prediction.py
 echo "Starting prediction..."
-python src/model_prediction.py --input_file="$test_data_file" --model_file="$model_file" --output_file="$predictions_file"
+python3 src/model_prediction.py --input_file="$test_data_file" --model_file="$model_file" --output_file="$predictions_file"
 
 echo "Pipeline completed."

@@ -1,21 +1,30 @@
-import pandas as pd
 import argparse
+import polars as pl
+import joblib
+from data_processing import clean_data, preprocess_data
+import json
 
 def load_data(file_path):
-    # TODO: Load test data from CSV file
-    return df
+    df_test = pl.read_csv(file_path)
+    df_test = preprocess_data(clean_data(df_test))
+    return df_test
 
 def load_model(model_path):
-    # TODO: Load the trained model
+    model = joblib.load(model_path)
     return model
 
 def make_predictions(df, model):
-    # TODO: Use the model to make predictions on the test data
+    predictions = model.predict(df.to_numpy())
     return predictions
 
 def save_predictions(predictions, predictions_file):
-    # TODO: Save predictions to a JSON file
-    pass
+    aux = pl.read_csv("data/index.csv")
+    ids = aux["Unnamed: 0"].to_list()
+    resul = {}
+    for i in range(predictions.shape[0]):
+        resul[str(ids[i])] = int(predictions[i])
+    with open(predictions_file, "w") as writer:
+        json.dump(resul, writer, indent = 4)
 
 def parse_arguments():
     parser = argparse.ArgumentParser(description='Prediction script for Energy Forecasting Hackathon')

@@ -1,20 +1,30 @@
-import pandas as pd
 import argparse
+import polars as pl
+from sklearn.model_selection import train_test_split
+import xgboost as xgb
+import joblib
 
 def load_data(file_path):
-    # TODO: Load processed data from CSV file
+    df = pl.read_csv(file_path)
     return df
 
 def split_data(df):
-    # TODO: Split data into training and validation sets (the test set is already provided in data/test_data.csv)
+    X_train, X_val, y_train, y_val = train_test_split(df.drop("Insect").to_numpy(), df["Insect"].to_numpy())
     return X_train, X_val, y_train, y_val
 
 def train_model(X_train, y_train):
-    # TODO: Initialize your model and train it
+    model = xgb.XGBClassifier(
+            objective='multi:softprob',
+            n_estimators=100,
+            learning_rate=0.1,
+            eval_metric='mlogloss',
+            random_state=27
+        )
+    model.fit(X_train, y_train)
     return model
 
 def save_model(model, model_path):
-    # TODO: Save your trained model
+    joblib.dump(model, model_path)
     pass
 
 def parse_arguments():

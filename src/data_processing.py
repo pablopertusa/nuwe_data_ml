@@ -1,28 +1,27 @@
 import argparse
 import polars as pl
-from sklearn.preprocessing import MinMaxScaler
 from utils import normalize_columns, is_day
 
 def load_data(file_path):
     df = pl.read_csv(file_path)
     return df
 
-
 def clean_data(df):
-    cols_to_clean = ["Hour", "Minutes"
-    'Sensor_alpha',
-    'Sensor_beta',
-    'Sensor_gamma',
-    'Sensor_alpha_plus',
-    'Sensor_beta_plus',
-    'Sensor_gamma_plus']
+    cols_to_clean = ["Hour", "Minutes",
+    "Sensor_alpha",
+    "Sensor_beta",
+    "Sensor_gamma",
+    "Sensor_alpha_plus",
+    "Sensor_beta_plus",
+    "Sensor_gamma_plus"]
     df_clean = normalize_columns(df, cols_to_clean)
     return df_clean
 
 def preprocess_data(df):
     df_processed = df.with_columns(
-        pl.col("Hour").map_elements(is_day).alias("is_day")
+        pl.col("Hour_n").map_elements(is_day, return_dtype=int).alias("is_day")
     )
+    df_processed.drop_in_place("Unnamed: 0")
     return df_processed
 
 def save_data(df, output_file):

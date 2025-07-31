@@ -7,10 +7,11 @@ def normalize_columns(df: pl.DataFrame, cols: list[str]):
             for col in cols
         ]
     )
-    df_normalized.drop_in_place(cols)
+    for col in cols:
+        df_normalized.drop_in_place(col)
     return df_normalized
 
-def is_day(hour: int):
+def is_day(hour: int) -> int:
     if hour >= 7 or hour <= 20:
         return 1
     return 0
