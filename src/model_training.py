@@ -16,7 +16,7 @@ def train_model(X_train, y_train):
     model = xgb.XGBClassifier(
             objective='multi:softprob',
             n_estimators=100,
-            learning_rate=0.1,
+            learning_rate=0.05,
             eval_metric='mlogloss',
             random_state=27
         )
