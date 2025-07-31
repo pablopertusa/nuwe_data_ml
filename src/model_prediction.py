@@ -20,9 +20,9 @@ def make_predictions(df, model):
 def save_predictions(predictions, predictions_file):
     aux = pl.read_csv("data/index.csv")
     ids = aux["Unnamed: 0"].to_list()
-    resul = {}
+    resul = {"target": {}}
     for i in range(predictions.shape[0]):
-        resul[str(ids[i])] = int(predictions[i])
+        resul["target"][str(ids[i])] = int(predictions[i])
     with open(predictions_file, "w") as writer:
         json.dump(resul, writer, indent = 4)
 
